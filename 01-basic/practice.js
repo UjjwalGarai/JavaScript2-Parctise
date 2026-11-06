@@ -1,17 +1,11 @@
-const a = [" ", 0, null, undefined, NaN]
+//  let num = -5; and prints "Positive", "Negative", or "Zero"
+let num = -5
 
-for(let b = 0; b < a.length; b++){
-    if(a[b]){
-        console.log(`${a[b]} is a Truthy Value`)
-    }else{
-        console.log(`${a[b]} is a Falsy Value`)
-
-    }
-
+if(num < 0){
+    console.log("Positive");
+}else if(num > 0){
+    console.log("Negative");
+    
+}else{
+    console.log("Zero");
 }
-
-console.log(typeof !- (10 / 2));
-const d = 10 / 2
-const e = -(d)
-const f = !e
-console.log(typeof f)
