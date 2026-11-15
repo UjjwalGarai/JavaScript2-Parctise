@@ -1,33 +1,50 @@
-//  let num = -5; and prints "Positive", "Negative", or "Zero"
-let num = 0.100
-
-if(num > 0){
-    console.log("Positive");
-}else if(num < 0){
-    console.log("Negative");
-    
-}else{
-    console.log("Zero");
+// 1. Minimum ----------------------------------------
+function minimum(num1, num2){
+    if(!Number.isNaN(num1) && !Number.isNaN(num2)){
+        if(num1 < num2){
+            return num1
+        }else{
+            return num2
+        }
+    } else{
+        return `Please enter valid number`
+    }
 }
 
-// for(let num = 1; num <=20; num ++) console.log(num)
+// console.log(minimum(45, 20))
 
-// "Liftoff!"
-// let num2 = 5
-// while(num2 >= 0){
-//     if(num2 === 0){
-//         console.log("Liftoff!")
-//     }else{
-//         console.log(num2)
-//     }
-//     num2--
-// }
-// let password
-// do{
-//     password = prompt("Enter Your Password")
-// }while(password != "")
-let sum = 0
-for(let x = 1; x <=100; x++){
-    sum+=x
+// 2. Recursion --------------------------------------
+function isEven(num){
+    if(num <= 0){
+        return false
+    }else{
+        isEven(num - 2) % 2 === 0
+        return true
+    }
 }
-console.log(sum)
+// console.log(isEven(30))
+// 3. Beancounting --------------------------------------
+function countBs(str){
+    return countChar(str, "B")
+}
+
+console.log(countBs("ABB"))
+
+function countChar(str, letter){
+    const strLength = str.length
+    let count = 0
+    let bCount = 0
+    while( count < strLength){
+        if(str[count] == letter){
+            bCount++
+        }
+        count++
+    }
+    return bCount
+}
+
+console.log(countChar("ABB", "A"))
+
+
+
+
