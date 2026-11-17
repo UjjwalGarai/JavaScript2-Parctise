@@ -12,4 +12,8 @@ function factorial(value){
 }
 
 console.log(factorial(3))
-console.log(innerVar);
+// console.log(innerVar);
+
+const a = "ujjwal"
+a[0] = 'a'
+console.log(a[0])
